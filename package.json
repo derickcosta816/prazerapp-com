@@ -1,37 +1,8 @@
 {
-  "name": "prazerapp.com",
+  "name": "prazerapp-com",
   "version": "1.0.0",
-  "description": "\"# PrazerApp landing\"",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/derickcosta816/prazerapp-com.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/derickcosta816/prazerapp-com/issues"
-  },
-  "homepage": "https://github.com/derickcosta816/prazerapp-com#readme"
-}
-
-
-// package.json
-{
-  "name": "duetoplay-com",
-  "version": "1.0.0",
-  "scripts": {
-    "build": "next build",       // ou o comando que gera sua versão de produção
-    "start": "next start"
-  },
-  // caso use dependências, instale-as normalmente:
-  "dependencies": {
-    "next": "^15.3.2",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "build": "echo \"No build step\""
   }
 }
