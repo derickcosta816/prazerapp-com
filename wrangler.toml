@@ -1,0 +1,12 @@
+name = "prazerapp-com"
+type = "javascript"
+
+account_id = "67524392d06307de2e04cd7cebb1f1af"
+
+workers_dev = false
+route = "prazerapp.com/*"
+zone_id = "85e91a5e6ac40096377c74eb5ee71f14"
+
+[site]
+bucket = "./public" 
+entry-point = "workers-site"
