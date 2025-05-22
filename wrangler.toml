@@ -1,9 +1,0 @@
-name = "prazerapp-com"
-main = "workers-site/index.js"
-account_id = "67524392d06307de2e04cd7cebb1f1af"
-compatibility_date = "2025-05-22"
-
-route = "prazerapp.com/*"
-
-[site]
-bucket = "./public"
