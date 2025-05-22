@@ -1,12 +1,11 @@
 name = "prazerapp-com"
-type = "javascript"
-
+main = "workers-site/index.js"
 account_id = "67524392d06307de2e04cd7cebb1f1af"
+compatibility_date = "2025-05-22"
 
-workers_dev = false
-route = "prazerapp.com/*"
-zone_id = "85e91a5e6ac40096377c74eb5ee71f14"
+
+route = "prazerapp.com/*"          
+
 
 [site]
-bucket = "./public" 
-entry-point = "workers-site"
+bucket = "./public"   
