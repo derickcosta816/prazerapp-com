@@ -2,95 +2,107 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Streaming ao Vivo | PrazerApp</title>
+  <title>Streaming Sensual | PrazerApp</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="Modelos sensuais ao vivo em plataformas interativas que sincronizam com seus brinquedos conectados." />
+        content="Modelos sensuais ao vivo e interatividade com brinquedos conectados. Descubra as melhores plataformas aqui." />
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* garante mesma altura nos dois cards, mas sem quebrar no mobile */
-    .stream-card { min-height: 380px; }
-    @media (max-width: 768px) { .stream-card { min-height: auto; } }
+    .stream-card{display:flex;flex-direction:row;gap:2rem;align-items:center;
+                 border-radius:var(--radius-xl);padding:2rem;}
+    .stream-card img.stream-img{width:320px;max-width:40%;flex-shrink:0;
+                                border-radius:var(--radius-lg);}
+    @media (max-width:768px){
+      .stream-card{flex-direction:column;text-align:center;}
+      .stream-card img.stream-img{width:100%;max-width:100%;}
+    }
   </style>
 </head>
 
 <body class="bg-dark text-light">
-  <!-- ===== NAVBAR ===== -->
+  <!-- NAVBAR -->
   <header class="navbar">
     <div class="container flex items-center justify-between py-3">
-      <a href="/" class="text-xl font-bold">PrazerApp</a>
+      <a href="/"           class="text-xl font-bold">PrazerApp</a>
       <nav class="nav-menu flex gap-6 text-sm">
         <a href="brinquedos.html" class="hover:text-pink">Brinquedos</a>
-        <a href="#top"               class="hover:text-pink">Streaming</a>
-        <a href="/#sobre"            class="hover:text-pink">Sobre</a>
+        <a href="#top"            class="hover:text-pink font-bold">Streaming</a>
+        <a href="/#sobre"         class="hover:text-pink">Sobre</a>
       </nav>
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
   <section class="py-12 text-center px-4">
     <h1 class="text-3xl md:text-4xl font-extrabold mb-4">
-      Modelos Online Agora
+      Modelos Online &amp; Vibrações em Sincronia
     </h1>
     <p class="max-w-2xl mx-auto text-lg opacity-70">
-      Descubra transmissões ao vivo em plataformas compatíveis com brinquedos
-      conectados – clique em qualquer card e abra o show em nova guia.
+      Conecte seus toys inteligentes, escolha seu streamer favorito e deixe o
+      prazer acontecer em tempo real — onde quer que você esteja.
     </p>
   </section>
 
-  <!-- ===== LISTA DE PLATAFORMAS / MODELOS ===== -->
+  <!-- PLATAFORMAS -->
   <main class="container mx-auto px-4 pb-16">
     <div class="grid gap-10">
-      <!-- Chaturbate card -->
-      <article class="card stream-card flex flex-col md:flex-row gap-6">
+      <!-- Chaturbate -->
+      <article class="card stream-card">
         <img src="assets/chaturbate-banner.webp"
-             alt="Modelos sensuais ao vivo na Chaturbate"
-             class="rounded-lg w-full max-w-sm" />
-        <div class="flex-1 flex flex-col">
-          <h2 class="text-xl font-semibold mb-2">Chaturbate</h2>
-          <p class="mb-4 flex-1">
-            Shows adultos 24&nbsp;/&nbsp;7 em HD com milhares de performers.
-            Cadastre-se grátis, ganhe tokens de boas-vindas e conecte seu toy
-            compatível para vibrar em tempo real com a transmissão.
+             alt="Chaturbate banner" class="stream-img" />
+        <div class="flex-1 flex flex-col gap-4">
+          <h2 class="text-xl font-semibold">Chaturbate</h2>
+          <p>
+            Shows 24/7 em HD com milhares de performers. Ganhe tokens de
+            boas-vindas, ative seu toy compatível e sinta cada tip vibrar junto
+            com a transmissão.
           </p>
           <a href="https://chaturbate.com/affiliados?track=prazerapp"
              target="_blank" rel="nofollow sponsored"
              class="btn btn-secondary w-full md:w-auto">
-            Assistir na Chaturbate
+             Assistir na Chaturbate
           </a>
         </div>
       </article>
 
-      <!-- CamSoda card -->
-      <article class="card stream-card flex flex-col md:flex-row gap-6">
+      <!-- CamSoda -->
+      <article class="card stream-card">
         <img src="assets/camsoda-banner.webp"
-             alt="Experiência imersiva em 3D e VR na CamSoda"
-             class="rounded-lg w-full max-w-sm" />
-        <div class="flex-1 flex flex-col">
-          <h2 class="text-xl font-semibold mb-2">CamSoda</h2>
-          <p class="mb-4 flex-1">
-            Plataforma interativa com shows em 360°, realidade virtual e
-            integração Lovense/Lush. Entre grátis e explore modelos que ativam
-            seu brinquedo mesmo a quilômetros de distância.
+             alt="CamSoda banner" class="stream-img" />
+        <div class="flex-1 flex flex-col gap-4">
+          <h2 class="text-xl font-semibold">CamSoda</h2>
+          <p>
+            Shows interativos, realidade virtual e integração Lovense/Lush.
+            Cadastre-se grátis, escolha seu show e mergulhe em uma experiência
+            que pulsa no mesmo ritmo do seu toy.
           </p>
           <a href="https://camsoda.com/signup?ref=prazerapp"
              target="_blank" rel="nofollow sponsored"
              class="btn btn-secondary w-full md:w-auto">
-            Assistir na CamSoda
+             Assistir na CamSoda
           </a>
         </div>
       </article>
     </div>
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- CTA BRINQUEDOS -->
+  <section class="bg-darker py-12 text-center px-4">
+    <h2 class="text-2xl font-bold mb-6">Potencialize seu Show</h2>
+    <p class="max-w-xl mx-auto mb-8 opacity-70">
+      Veja os brinquedos conectados mais vendidos e descubra qual combina com
+      suas transmissões favoritas.
+    </p>
+    <a href="/index.html#produtos" class="btn btn-primary text-lg">
+      Ver Brinquedos em Destaque
+    </a>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="bg-darker text-center text-xs py-10 opacity-70">
     <p>© 2025 PrazerApp • Todos os direitos reservados.</p>
-    <p>Conteúdo exclusivo para <strong>maiores de 18 anos</strong>. Se você não
-       tem idade legal, saia imediatamente.</p>
-    <p>Somos afiliados a Chaturbate, CamSoda, Amazon e outras redes. Recebemos
-       comissão por compras ou assinaturas qualificadas, sem custo extra para
-       você.</p>
+    <p>Conteúdo exclusivo para <strong>maiores de 18 anos</strong>.</p>
+    <p>Links de afiliado: Amazon, Chaturbate, CamSoda.</p>
   </footer>
 </body>
 </html>
