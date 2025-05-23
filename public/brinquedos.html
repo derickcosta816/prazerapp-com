@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Catálogo de Brinquedos | PrazerApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore todos os sex toys conectados disponíveis no PrazerApp." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-dark text-light">
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container flex items-center justify-between py-3">
+      <a href="/" class="text-xl font-bold">PrazerApp</a>
+      <nav class="nav-menu flex gap-6 text-sm">
+        <a href="/index.html#produtos" class="hover:text-pink">Home</a>
+        <a href="streaming.html" class="hover:text-pink">Streaming</a>
+        <a href="/index.html#sobre" class="hover:text-pink">Sobre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-12">
+    <h1 class="text-3xl font-extrabold mb-8 text-center">Catálogo Completo</h1>
+
+    <p class="text-center opacity-70 max-w-2xl mx-auto mb-10">
+      Abaixo você encontra todos os brinquedos inteligentes que oferecemos. Use
+      nossos links de afiliado para garantir o melhor preço e apoiar o projeto.
+    </p>
+
+    <!-- Filtro simples -->
+    <div class="flex gap-6 justify-between items-center mb-8 flex-wrap">
+      <input type="search" id="search-input" placeholder="Buscar por nome…" class="w-full md:w-1/3 p-2 rounded-lg bg-darker text-light">
+      <select id="sort-select" class="p-2 rounded-lg bg-darker text-light">
+        <option value="popular">Mais populares</option>
+        <option value="price-low">Menor preço</option>
+        <option value="price-high">Maior preço</option>
+      </select>
+    </div>
+
+    <!-- Grid de produtos -->
+    <div class="grid" id="catalog-grid">
+      <!-- Exemplo de card (duplique / gere via CMS) -->
+      <article class="col-1-3 card flex flex-col items-center">
+        <img src="assets/gs-frequency-potter.webp" alt="G-S Frequency Potter" class="rounded-lg w-full">
+        <h3 class="text-xl font-bold mt-4 text-center">G-S Frequency Potter</h3>
+        <p class="text-pink font-semibold mb-4">R$ 57,00</p>
+        <a href="gs-frequency-potter.html" class="btn btn-primary w-full">Ver detalhes</a>
+      </article>
+      <!-- Adicione mais produtos aqui -->
+    </div>
+  </main>
+
+  <footer class="text-center text-xs py-10 opacity-60">
+    © 2025 PrazerApp • +18 Conteúdo indicado apenas para adultos. Compras via links afiliados.
+  </footer>
+
+  <!-- JS para filtro simples (client-side) -->
+  <script>
+    const searchInput=document.getElementById('search-input');
+    const sortSelect=document.getElementById('sort-select');
+    const cards=[...document.querySelectorAll('#catalog-grid article')];
+
+    function filter(){
+      const q=searchInput.value.toLowerCase();
+      cards.forEach(c=>{
+        const name=c.querySelector('h3').textContent.toLowerCase();
+        c.style.display=name.includes(q)?'':'none';
+      });
+    }
+    searchInput.addEventListener('input',filter);
+    // sort placeholder
+    sortSelect.addEventListener('change',()=>alert('Ordenação a ser implementada em breve'));
+  </script>
+</body>
+</html>
