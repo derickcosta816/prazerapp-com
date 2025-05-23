@@ -1,240 +1,140 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PrazerApp • Vibrações & Streams Interativos</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --pink:#ff3cac;
-  --purple:#784ba0;
-  --dark:#0f0e12;
-  --light:#faf7fc;
-  --card-bg:#1b1a22;
-}
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:linear-gradient(135deg,var(--purple),var(--pink));color:var(--light);min-height:100vh}
-
-/* links e botões */
-a{color:inherit;text-decoration:none;transition:opacity .25s}
-a:hover{opacity:.8}
-.btn{display:inline-block;background:var(--pink);padding:.9rem 2.2rem;border-radius:30px;font-weight:600;box-shadow:0 4px 14px rgba(0,0,0,.25);transition:transform .25s}
-.btn:hover{transform:translateY(-3px)}
-
-/* cabeçalho */
-header{position:sticky;top:0;z-index:1000;background:rgba(15,14,18,.65);backdrop-filter:blur(7px)}
-.container{max-width:1200px;margin:auto;padding:0 1rem}
-.navbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.navbar nav{display:flex;gap:1.5rem;font-size:.93rem;font-weight:500;text-transform:uppercase}
-.logo{font-size:1.35rem;font-weight:700;letter-spacing:.5px}
-
-/* botão mobile */
-.menu-toggle{display:none;width:30px;height:22px;position:relative;cursor:pointer}
-.menu-toggle span{position:absolute;left:0;width:100%;height:3px;background:var(--light);border-radius:2px;transition:.3s}
-.menu-toggle span:nth-child(1){top:0}
-.menu-toggle span:nth-child(2){top:9px}
-.menu-toggle span:nth-child(3){bottom:0}
-
-/* hero */
-.hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:6rem 1rem 4rem}
-.hero h1{font-size:clamp(2.4rem,6vw,3.8rem);line-height:1.1;margin-bottom:1rem;font-weight:700}
-.hero p{font-size:1.15rem;max-width:680px;margin-bottom:2.2rem}
-
-/* seções */
-.section{padding:4.5rem 1rem;background:var(--light);color:var(--dark)}
-.section.alt{background:var(--dark);color:var(--light)}
-.section h2{font-size:2rem;text-align:center;margin-bottom:3rem}
-
-/* cards */
-.cards{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--card-bg);border-radius:18px;padding:1.6rem;text-align:center;transition:transform .25s,box-shadow .25s}
-.card img{width:100%;height:220px;object-fit:contain;background:#fff;border-radius:14px;margin-bottom:1rem}  /* objeto agora enquadra o toy */
-.card h3{font-size:1.1rem;margin-bottom:.4rem}
-.card .price{font-size:1rem;font-weight:600;color:var(--pink);margin-bottom:.9rem}
-.card:hover{transform:translateY(-6px);box-shadow:0 10px 28px rgba(0,0,0,.35)}
-
-/* newsletter */
-.newsletter{max-width:420px;margin:2.5rem auto 0;display:flex;gap:.6rem}
-.newsletter input{flex:1;padding:1rem;border-radius:25px;border:none}
-
-/* rodapé */
-footer{padding:2.5rem 1rem;background:#0a090d;color:#8b8b8b;font-size:.85rem;text-align:center}
-
-/* mobile nav */
-@media(max-width:768px){
-  .menu-toggle{display:block}
-  .navbar nav{position:absolute;top:64px;left:0;right:0;background:var(--dark);flex-direction:column;gap:1.2rem;padding:1.2rem;display:none}
-  .navbar nav.show{display:flex}
-  .menu-toggle.active span:nth-child(1){transform:rotate(45deg);top:9px}
-  .menu-toggle.active span:nth-child(2){opacity:0}
-  .menu-toggle.active span:nth-child(3){transform:rotate(-45deg);bottom:9px}
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded',()=>{
-  const t=document.querySelector('.menu-toggle'),n=document.getElementById('nav');
-  t.addEventListener('click',()=>{t.classList.toggle('active');n.classList.toggle('show')});
-});
-</script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PrazerApp | Brinquedos Conectados & Streaming</title>
+  <!-- CSS global reutilizado em todas as páginas -->
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Descubra sex toys controlados por app e streaming de modelos sensuais. Compre com segurança através dos nossos links de afiliado." />
 </head>
 
-<body>
-
-<header>
-  <div class="container navbar">
-    <a class="logo" href="#">PrazerApp</a>
-    <div class="menu-toggle"><span></span><span></span><span></span></div>
-    <nav id="nav">
-      <a href="#toys">Brinquedos App</a>
-      <a href="#streams">Streaming ao Vivo</a>
-      <a href="#promo">Promoções</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <h1>Sinta, Controle &amp; Transmita Prazer</h1>
-  <p>Os melhores <strong>vibradores controlados por aplicativo</strong> e as mais quentes
-     <strong>lives sensuais</strong> reunidos em um só lugar para elevar suas experiências —
-     sozinho(a) ou acompanhado(a).</p>
-  <a href="#toys" class="btn">Explorar Agora</a>
-</section>
-
-<!-- Vantagens -->
-<section class="section">
-  <div class="container">
-    <h2>Por que o PrazerApp?</h2>
-    <div class="cards">
-      <!-- imagem de fliperama substituída -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1607746882042-f44e1e7259af?auto=format&fit=crop&w=600&q=80"
-             alt="Controle via smartphone">
-        <h3>Toys 100 % Conectados</h3>
-        <p>Vibre no ritmo de músicas, jogos ou toques do parceiro, mesmo a quilômetros de distância.</p>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1521033719794-41049d18ab53?auto=format&fit=crop&w=600&q=80"
-             alt="Streaming hot">
-        <h3>Streaming Hot Lives</h3>
-        <p>Assista e interaja com modelos reais — cada tip envia estímulos automáticos ao toy delas!</p>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1604076913837-2151fad2d8ee?auto=format&fit=crop&w=600&q=80"
-             alt="Segurança">
-        <h3>Compra Discreta &amp; Segura</h3>
-        <p>Pagamentos anônimos, embalagem neutra e suporte ágil para garantir sua privacidade.</p>
-      </div>
+<body class="bg-dark text-light">
+  <!-- ========================= NAVBAR ========================= -->
+  <header class="navbar">
+    <div class="container flex items-center justify-between py-3">
+      <a href="#top" class="text-xl font-bold">PrazerApp</a>
+      <nav id="nav-menu" class="nav-menu md:flex gap-6 text-sm">
+        <a href="#produtos" class="hover:text-pink">Brinquedos</a>
+        <a href="#streaming" class="hover:text-pink">Streaming</a>
+        <a href="#sobre" class="hover:text-pink">Sobre</a>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- Brinquedos -->
-<section id="toys" class="section alt">
-  <div class="container">
-    <h2>Brinquedos Controlados por App</h2>
-    <div class="cards">
+  <!-- ========================= HERO ========================= -->
+  <section id="hero" class="py-20 text-center px-4">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+      Brinquedos Conectados &amp; Streaming Sensual
+    </h1>
+    <p class="max-w-2xl mx-auto text-lg opacity-80">
+      Combine tecnologia e prazer: descubra sex toys controlados por aplicativo
+      e assine serviços de streaming ao vivo que sincronizam vibrações com o show.
+    </p>
+  </section>
 
-      <div class="card">
-        <!-- imagem agora “contain” dentro do espaço -->
-        <img src="https://m.media-amazon.com/images/I/51qAZp6fd-L.__AC_SX300_SY300_QL70_ML2_.jpg"
-             alt="G-S Frequency Potter">
-        <h3>G-S Frequency Potter</h3>
-        <p class="price">R$ 57,00</p>
-        <a href="https://amzn.to/3setnft-20" target="_blank" rel="nofollow sponsored" class="btn">
+  <!-- ========================= PRODUTOS ========================= -->
+  <main id="produtos" class="container mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold mb-8 text-center">
+      Brinquedos Conectados em Destaque
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-10" id="products-grid">
+      <!-- ========== CARD: G‑S Frequency Potter ========== -->
+      <article class="bg-darker rounded-xl shadow-lg p-6 flex flex-col items-center">
+        <img
+          src="assets/gs-frequency-potter.webp"
+          alt="G-S Frequency Potter vibrador vestível controlado por app"
+          class="rounded-lg w-full"
+        />
+        <h3 class="text-xl font-bold mt-4">G‑S Frequency Potter</h3>
+        <p class="text-pink font-semibold mb-4">R$ 57,00</p>
+        <a
+          href="gs-frequency-potter.html"
+          class="btn btn-primary w-full text-center"
+        >
           Comprar na Amazon
         </a>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1525097487452-6278ff080c31?auto=format&fit=crop&w=600&q=80"
-             alt="Em breve">
-        <h3>Próximo Lançamento</h3>
-        <p class="price">Em breve</p>
-        <a href="#" class="btn" style="opacity:.5;pointer-events:none">Aguarde</a>
-      </div>
-
+      </article>
+      <!-- Você pode duplicar o bloco acima para adicionar mais produtos -->
     </div>
-  </div>
-</section>
+  </main>
 
-<!-- Streaming -->
-<section id="streams" class="section">
-  <div class="container">
-    <h2>Streaming Sensual ao Vivo</h2>
-    <p style="text-align:center;max-width:720px;margin:0 auto 2.5rem">
-      Clique em uma plataforma, cadastre-se com nosso link exclusivo e receba <strong>bônus de boas-vindas</strong>.
-      Cada nova conta gerada ajuda o PrazerApp a continuar trazendo conteúdo incrível. 😉
-    </p>
+  <!-- ========================= STREAMING CTA ========================= -->
+  <section id="streaming" class="bg-darker py-16 px-4">
+    <h2 class="text-2xl font-bold mb-10 text-center">
+      Experimente Streaming ao Vivo com Modelos Sensuais
+    </h2>
 
-    <div class="cards">
+    <div class="container mx-auto grid md:grid-cols-2 gap-8">
+      <!-- ======= CHATEURBATE ======= -->
+      <article class="rounded-xl overflow-hidden shadow-lg flex flex-col bg-dark">
+        <img
+          src="assets/chaturbate-banner.webp"
+          alt="Modelos sensuais ao vivo na Chaturbate"
+          class="w-full object-cover h-48"
+        />
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-xl font-semibold mb-2">Chaturbate</h3>
+          <p class="mb-4 flex-1">
+            Shows adultos 24&nbsp;/&nbsp;7 em alta definição com milhares de
+            performers. Crie uma conta gratuita e libere recursos premium para
+            experiências ainda mais quentes.
+          </p>
+          <a
+            href="https://chaturbate.com/affiliados?track=prazerapp"
+            target="_blank"
+            rel="nofollow sponsored"
+            class="btn btn-secondary text-center w-full"
+          >
+            Assinar Chaturbate
+          </a>
+        </div>
+      </article>
 
-      <!-- você substituirá os href pelos seus links pessoais -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1589382129443-41af66dd4ea1?auto=format&fit=crop&w=600&q=80" alt="Stripchat">
-        <h3>Stripchat</h3>
-        <p>Shows interativos com vibração sincronizada. +200 mil modelos online 24/7.</p>
-        <a href="#" target="_blank" rel="nofollow sponsored" class="btn">Entrar com Bônus</a>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1539749351986-f99bb7f7405e?auto=format&fit=crop&w=600&q=80" alt="Chaturbate">
-        <h3>Chaturbate</h3>
-        <p>Gigante global de cams; bônus para novos usuários e enorme diversidade de salas.</p>
-        <a href="#" target="_blank" rel="nofollow sponsored" class="btn">Ganhar Tokens Grátis</a>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1569180885108-26eb5e625251?auto=format&fit=crop&w=600&q=80" alt="BongaCams">
-        <h3>BongaCams</h3>
-        <p>Salas públicas e privadas com suporte a Lovense, OhMiBod e muito mais.</p>
-        <a href="#" target="_blank" rel="nofollow sponsored" class="btn">Assistir Agora</a>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1526403228-3ddb4000452d?auto=format&fit=crop&w=600&q=80" alt="LiveJasmin">
-        <h3>LiveJasmin</h3>
-        <p>Câmeras em 4K, categoria premium, créditos iniciais para novos membros.</p>
-        <a href="#" target="_blank" rel="nofollow sponsored" class="btn">Desbloquear Créditos</a>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=600&q=80" alt="CamSoda">
-        <h3>CamSoda</h3>
-        <p>Interface moderna, shows VR e promoções “freemium” para novos cadastros.</p>
-        <a href="#" target="_blank" rel="nofollow sponsored" class="btn">Explorar Shows</a>
-      </div>
-
+      <!-- ======= CAMSODA ======= -->
+      <article class="rounded-xl overflow-hidden shadow-lg flex flex-col bg-dark">
+        <img
+          src="assets/camsoda-banner.webp"
+          alt="Experiência imersiva em 3D e VR na CamSoda"
+          class="w-full object-cover h-48"
+        />
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-xl font-semibold mb-2">CamSoda</h3>
+          <p class="mb-4 flex-1">
+            Plataforma interativa com brinquedos sincronizados, vídeos em 360° e
+            realidade virtual. Cadastre‑se grátis e ganhe bônus de
+            boas‑vindas.
+          </p>
+          <a
+            href="https://camsoda.com/signup?ref=prazerapp"
+            target="_blank"
+            rel="nofollow sponsored"
+            class="btn btn-secondary text-center w-full"
+          >
+            Assinar CamSoda
+          </a>
+        </div>
+      </article>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Promo -->
-<section id="promo" class="section alt">
-  <div class="container">
-    <h2>Cupons &amp; Combos Exclusivos</h2>
-    <p style="text-align:center;max-width:700px;margin:0 auto">
-      Inscreva-se para receber cupons de desconto nos melhores toys conectados e
-      bônus de fichas nas plataformas de streaming parceiras.
+  <!-- ========================= SOBRE ========================= -->
+  <section id="sobre" class="container mx-auto px-4 py-20 text-center max-w-3xl">
+    <h2 class="text-2xl font-bold mb-4">Sobre o PrazerApp</h2>
+    <p class="opacity-80">
+      Nossa missão é reunir em um único lugar tecnologias que potencializam a
+      vida íntima — de sextoys inteligentes a plataformas de streaming capazes
+      de sincronizar vibrações em tempo real. Todos os links aqui divulgados são
+      afiliados: ao comprar ou assinar pelos nossos botões você apoia o
+      crescimento do projeto sem pagar nada a mais.
     </p>
-    <form class="newsletter" action="#" method="post">
-      <input type="email" placeholder="Seu e-mail" required>
-      <button class="btn" type="submit">Quero Desconto!</button>
-    </form>
-  </div>
-</section>
+  </section>
 
-<footer id="contato">
-  <p>&copy; 2025 PrazerApp • Proibido para menores de 18 anos.</p>
-  <p>Compras 100 % discretas • Dúvidas? contato@prazerapp.com</p>
-</footer>
-
+  <!-- ========================= FOOTER ========================= -->
+  <footer class="text-center text-xs py-10 opacity-60">
+    © 2025 PrazerApp. Todos os direitos reservados.
+  </footer>
 </body>
 </html>
