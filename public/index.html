@@ -4,30 +4,42 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>PrazerApp | Brinquedos Conectados & Streaming</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Descubra sex toys controlados por app, streaming adulto e conteúdo tech-erótico de última geração." />
+  <meta name="description"
+        content="Sex toys controlados por app, streaming adulto interativo e as tendências tech-eróticas mais quentes." />
+
+  <!-- — Ajuste visual APENAS para os dois cards de streaming — -->
   <style>
-    /* deixa os dois cards de streaming com a mesma altura */
-    .stream-card{min-height:380px;}
-    @media(max-width:768px){.stream-card{min-height:auto;}}
+    .stream-card{
+      display:flex; flex-direction:row; gap:2rem; align-items:center;
+      border-radius:var(--radius-xl); padding:2rem;
+    }
+    .stream-card img.stream-img{
+      width:320px; max-width:40%; flex-shrink:0; border-radius:var(--radius-lg);
+    }
+    @media (max-width:768px){
+      .stream-card{flex-direction:column; text-align:center;}
+      .stream-card img.stream-img{width:100%; max-width:100%;}
+    }
   </style>
 </head>
 
 <body class="bg-dark text-light">
-  <!-- ========== NAVBAR ========== -->
+  <!-- ========= NAVBAR ========= -->
   <header class="navbar">
     <div class="container flex items-center justify-between py-3">
       <a href="#top" class="text-xl font-bold">PrazerApp</a>
-      <nav id="nav-menu" class="nav-menu flex gap-6 text-sm">
-        <a href="brinquedos.html"   class="hover:text-pink">Brinquedos</a>
-        <a href="streaming.html"    class="hover:text-pink">Streaming</a>
-        <a href="#sobre"            class="hover:text-pink">Sobre</a>
+      <nav class="nav-menu flex gap-6 text-sm">
+        <a href="brinquedos.html" class="hover:text-pink">Brinquedos</a>
+        <a href="streaming.html"  class="hover:text-pink">Streaming</a>
+        <a href="#sobre"          class="hover:text-pink">Sobre</a>
       </nav>
     </div>
   </header>
 
-  <!-- ========== HERO ========== -->
+  <!-- ========= HERO ========= -->
   <section id="hero" class="py-12 text-center px-4">
     <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
       Brinquedos Conectados &amp; Streaming Sensual
@@ -39,102 +51,103 @@
     </p>
   </section>
 
-  <!-- ========== PRODUTOS EM DESTAQUE ========== -->
+  <!-- ========= PRODUTOS EM DESTAQUE ========= -->
   <main id="produtos" class="container mx-auto px-4 py-12">
     <h2 class="text-2xl font-bold mb-8 text-center">
       Brinquedos Conectados em Destaque
     </h2>
 
-    <div class="grid" id="products-grid">
-      <!-- CARD 1 (exemplo) -->
+    <div class="grid">
+      <!-- CARD 1 (exemplo real) -->
       <article class="col-1-3 card flex flex-col items-center">
-        <img src="assets/gs-frequency-potter.webp" alt="G-S Frequency Potter" class="rounded-lg w-full">
+        <img src="assets/gs-frequency-potter.webp" alt="G-S Frequency Potter"
+             class="rounded-lg w-full">
         <h3 class="text-xl font-bold mt-4 text-center">G-S Frequency Potter</h3>
         <p  class="text-pink font-semibold mb-4">R$ 57,00</p>
-        <a href="gs-frequency-potter.html" class="btn btn-primary w-full">Comprar na Amazon</a>
+        <a href="gs-frequency-potter.html" class="btn btn-primary w-full">
+          Comprar na Amazon
+        </a>
       </article>
 
-      <!-- Espaços reservados para que, futuramente, o back-end ou script JS
-           popule com os 5 produtos mais vendidos automaticamente -->
-      <article class="col-1-3 card flex flex-col items-center"><p class="opacity-60 py-20">Em breve</p></article>
-      <article class="col-1-3 card flex flex-col items-center"><p class="opacity-60 py-20">Em breve</p></article>
-      <article class="col-1-3 card flex flex-col items-center"><p class="opacity-60 py-20">Em breve</p></article>
-      <article class="col-1-3 card flex flex-col items-center"><p class="opacity-60 py-20">Em breve</p></article>
+      <!-- 4 espaços reservados p/ futura listagem automática -->
+      <article class="col-1-3 card flex flex-col items-center">
+        <p class="opacity-60 py-20">Em breve</p></article>
+      <article class="col-1-3 card flex flex-col items-center">
+        <p class="opacity-60 py-20">Em breve</p></article>
+      <article class="col-1-3 card flex flex-col items-center">
+        <p class="opacity-60 py-20">Em breve</p></article>
+      <article class="col-1-3 card flex flex-col items-center">
+        <p class="opacity-60 py-20">Em breve</p></article>
     </div>
   </main>
 
-  <!-- ========== STREAMING CTA ========== -->
+  <!-- ========= STREAMING CTA ========= -->
   <section id="stream-section" class="bg-darker py-12 px-4">
     <h2 class="text-2xl font-bold mb-10 text-center">
       Experimente Streaming ao Vivo com Modelos Sensuais
     </h2>
 
     <div class="container mx-auto grid gap-10">
+      <div class="container mx-auto grid gap-10">
       <!-- Chaturbate -->
-      <article class="card stream-card flex flex-col md:flex-row gap-6">
-        <img src="assets/chaturbate-banner.webp" alt="Chaturbate banner" class="rounded-lg w-full max-w-sm">
-        <div class="flex-1 flex-col flex">
-          <h3 class="text-xl font-semibold mb-2">Chaturbate</h3>
-          <p class="mb-4 flex-1">
-            Shows adultos 24 / 7 em alta definição com milhares de performers.
+      <article class="card stream-card">
+        <img src="assets/chaturbate-banner.webp" alt="Chaturbate banner" class="stream-img" width="320" height="200">
+        <div class="flex-1 flex flex-col gap-4">
+          <h3 class="text-xl font-semibold">Chaturbate</h3>
+          <p>
+            Shows adultos 24/7 em alta definição com milhares de performers.
             Crie sua conta gratuita e desbloqueie recursos premium para
             experiências ainda mais quentes.
           </p>
-          <a href="https://chaturbate.com/affiliados?track=prazerapp"
-             target="_blank" rel="nofollow sponsored"
-             class="btn btn-secondary w-full md:w-auto">
-            Assinar Chaturbate
-          </a>
+          <a href="https://chaturbate.com/affiliados?track=prazerapp" target="_blank" rel="nofollow sponsored" class="btn btn-secondary w-full md:w-auto">Assinar Chaturbate</a>
         </div>
       </article>
 
       <!-- CamSoda -->
-      <article class="card stream-card flex flex-col md:flex-row gap-6">
-        <img src="assets/camsoda-banner.webp" alt="CamSoda banner" class="rounded-lg w-full max-w-sm">
-        <div class="flex-1 flex-col flex">
-          <h3 class="text-xl font-semibold mb-2">CamSoda</h3>
-          <p class="mb-4 flex-1">
-            Plataforma interativa com brinquedos sincronizados, vídeos em 360°
-            e realidade virtual. Cadastre-se grátis e ganhe bônus de boas-vindas.
+      <article class="card stream-card">
+        <img src="assets/camsoda-banner.webp" alt="CamSoda banner" class="stream-img" width="320" height="200">
+        <div class="flex-1 flex flex-col gap-4">
+          <h3 class="text-xl font-semibold">CamSoda</h3>
+          <p>
+            Plataforma interativa com brinquedos sincronizados, vídeos em 360° e
+            realidade virtual. Cadastre-se grátis e ganhe bônus de boas-vindas.
           </p>
-          <a href="https://camsoda.com/signup?ref=prazerapp"
-             target="_blank" rel="nofollow sponsored"
-             class="btn btn-secondary w-full md:w-auto">
-            Assinar CamSoda
+          <a href="https://camsoda.com/signup?ref=prazerapp" target="_blank" rel="nofollow sponsored" class="btn btn-secondary w-full md:w-auto">Assinar CamSoda</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
           </a>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- ========== SOBRE ========== -->
+  <!-- ========= SOBRE ========= -->
   <section id="sobre" class="container mx-auto px-4 py-20 max-w-3xl">
     <h2 class="text-2xl font-bold mb-6 text-center">Sobre o PrazerApp</h2>
     <p class="opacity-70 text-lg" style="text-align:justify">
-      A revolução digital aproximou o toque de um clique. Em poucos anos,
-      assistimos à fusão irreversível entre intimidade e tecnologia: vibradores
-      que se conectam à nuvem, apps que sincronizam batimentos musicais com
-      pulsações, transmissões em 4K capazes de controlar brinquedos de quem
-      assiste – tudo enquanto algoritmos personalizam recomendações sensuais em
-      tempo real. O <strong>PrazerApp</strong> nasceu nesse turbilhão de
-      inovações para ser seu hub confiável: garimpamos os sex toys mais vendidos
-      do planeta, testamos plataformas de streaming interativo e negociamos
-      parcerias para que cada compra ou assinatura gere benefícios
-      exclusivos aos nossos visitantes. Ao escolher comprar por aqui, você
-      aproveita ofertas verificadas e apoia diretamente a expansão do projeto –
-      sem pagar nada a mais. Explore, teste, descubra sua próxima fantasia
-      tech-erótica e sinta no corpo o futuro que já chegou.
+      A revolução digital aproximou o toque de um clique. Vibradores que se
+      conectam à nuvem, apps que sincronizam músicas com pulsações, transmissões
+      4-K que controlam toys de quem assiste — tudo guiado por algoritmos que
+      personalizam recomendações em tempo real. O <strong>PrazerApp</strong>
+      nasceu para ser seu hub confiável: selecionamos os sex toys mais vendidos,
+      testamos plataformas de streaming interativo e negociamos parcerias para
+      que cada compra ou assinatura conceda benefícios exclusivos. Explore,
+      descubra sua próxima fantasia tech-erótica e sinta no corpo o futuro que
+      já chegou.
     </p>
   </section>
 
-  <!-- ========== RODAPÉ ========== -->
+  <!-- ========= FOOTER ========= -->
   <footer class="bg-darker text-center text-xs py-10 opacity-70">
     <p>© 2025 PrazerApp • Todos os direitos reservados.</p>
-    <p>Conteúdo destinado exclusivamente a <strong>maiores de 18 anos</strong>.
-       Se você não tiver idade legal em sua jurisdição, saia imediatamente.</p>
-    <p>Participamos do programa Amazon Services LLC Associates e de outras redes
-       de afiliados – recebemos comissão por compras qualificadas, sem custo
-       adicional ao usuário.</p>
+    <p>Conteúdo exclusivo para <strong>maiores de 18 anos</strong>. Se você não
+       tem idade legal em sua jurisdição, saia imediatamente.</p>
+    <p>Participamos de programas de afiliados (Amazon, Chaturbate, CamSoda e
+       outros) – recebemos comissão por compras ou assinaturas qualificadas, sem
+       custo adicional para você.</p>
   </footer>
 </body>
 </html>
