@@ -1,5 +1,5 @@
 {
-  "name": "prazerapp",
+  "name": "prazerapp-com",
   "compatibility_date": "2025-05-22",
   "main": "./_worker.js",
   "assets": { "directory": "./public" }
