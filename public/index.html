@@ -5,11 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PrazerApp • Vibrações & Streams Interativos</title>
 
-<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-<!-- ESTILO INLINE -->
 <style>
 :root{
   --pink:#ff3cac;
@@ -18,82 +16,75 @@
   --light:#faf7fc;
   --card-bg:#1b1a22;
 }
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:linear-gradient(135deg,var(--purple),var(--pink));color:var(--light);min-height:100vh}
 
-/* Links & botões */
+/* links e botões */
 a{color:inherit;text-decoration:none;transition:opacity .25s}
 a:hover{opacity:.8}
 .btn{display:inline-block;background:var(--pink);padding:.9rem 2.2rem;border-radius:30px;font-weight:600;box-shadow:0 4px 14px rgba(0,0,0,.25);transition:transform .25s}
 .btn:hover{transform:translateY(-3px)}
 
-/* Cabeçalho */
+/* cabeçalho */
 header{position:sticky;top:0;z-index:1000;background:rgba(15,14,18,.65);backdrop-filter:blur(7px)}
 .container{max-width:1200px;margin:auto;padding:0 1rem}
 .navbar{display:flex;justify-content:space-between;align-items:center;height:64px}
 .navbar nav{display:flex;gap:1.5rem;font-size:.93rem;font-weight:500;text-transform:uppercase}
 .logo{font-size:1.35rem;font-weight:700;letter-spacing:.5px}
 
-/* Botão hamburguer */
+/* botão mobile */
 .menu-toggle{display:none;width:30px;height:22px;position:relative;cursor:pointer}
 .menu-toggle span{position:absolute;left:0;width:100%;height:3px;background:var(--light);border-radius:2px;transition:.3s}
 .menu-toggle span:nth-child(1){top:0}
 .menu-toggle span:nth-child(2){top:9px}
 .menu-toggle span:nth-child(3){bottom:0}
 
-/* Hero */
+/* hero */
 .hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:6rem 1rem 4rem}
 .hero h1{font-size:clamp(2.4rem,6vw,3.8rem);line-height:1.1;margin-bottom:1rem;font-weight:700}
 .hero p{font-size:1.15rem;max-width:680px;margin-bottom:2.2rem}
 
-/* Seções genéricas */
+/* seções */
 .section{padding:4.5rem 1rem;background:var(--light);color:var(--dark)}
 .section.alt{background:var(--dark);color:var(--light)}
 .section h2{font-size:2rem;text-align:center;margin-bottom:3rem}
 
-/* Grades de cartões */
+/* cards */
 .cards{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
 .card{background:var(--card-bg);border-radius:18px;padding:1.6rem;text-align:center;transition:transform .25s,box-shadow .25s}
-.card img{width:100%;height:220px;object-fit:cover;border-radius:14px;margin-bottom:1rem}
+.card img{width:100%;height:220px;object-fit:contain;background:#fff;border-radius:14px;margin-bottom:1rem}  /* objeto agora enquadra o toy */
 .card h3{font-size:1.1rem;margin-bottom:.4rem}
 .card .price{font-size:1rem;font-weight:600;color:var(--pink);margin-bottom:.9rem}
 .card:hover{transform:translateY(-6px);box-shadow:0 10px 28px rgba(0,0,0,.35)}
 
-/* Newsletter */
+/* newsletter */
 .newsletter{max-width:420px;margin:2.5rem auto 0;display:flex;gap:.6rem}
 .newsletter input{flex:1;padding:1rem;border-radius:25px;border:none}
 
-/* Footer */
+/* rodapé */
 footer{padding:2.5rem 1rem;background:#0a090d;color:#8b8b8b;font-size:.85rem;text-align:center}
 
-/* Mobile nav */
+/* mobile nav */
 @media(max-width:768px){
   .menu-toggle{display:block}
   .navbar nav{position:absolute;top:64px;left:0;right:0;background:var(--dark);flex-direction:column;gap:1.2rem;padding:1.2rem;display:none}
   .navbar nav.show{display:flex}
-  /* animação X */
   .menu-toggle.active span:nth-child(1){transform:rotate(45deg);top:9px}
   .menu-toggle.active span:nth-child(2){opacity:0}
   .menu-toggle.active span:nth-child(3){transform:rotate(-45deg);bottom:9px}
 }
 </style>
 
-<!-- JS nav toggle -->
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
-  const toggle=document.querySelector('.menu-toggle');
-  const nav=document.getElementById('nav');
-  toggle.addEventListener('click',()=>{
-    toggle.classList.toggle('active');
-    nav.classList.toggle('show');
-  });
+  const t=document.querySelector('.menu-toggle'),n=document.getElementById('nav');
+  t.addEventListener('click',()=>{t.classList.toggle('active');n.classList.toggle('show')});
 });
 </script>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header>
   <div class="container navbar">
     <a class="logo" href="#">PrazerApp</a>
@@ -107,56 +98,64 @@ document.addEventListener('DOMContentLoaded',()=>{
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <h1>Sinta, Controle & Transmita Prazer</h1>
+  <h1>Sinta, Controle &amp; Transmita Prazer</h1>
   <p>Os melhores <strong>vibradores controlados por aplicativo</strong> e as mais quentes
      <strong>lives sensuais</strong> reunidos em um só lugar para elevar suas experiências —
      sozinho(a) ou acompanhado(a).</p>
   <a href="#toys" class="btn">Explorar Agora</a>
 </section>
 
-<!-- FEATURES -->
+<!-- Vantagens -->
 <section class="section">
   <div class="container">
     <h2>Por que o PrazerApp?</h2>
     <div class="cards">
+      <!-- imagem de fliperama substituída -->
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Controle total">
+        <img src="https://images.unsplash.com/photo-1607746882042-f44e1e7259af?auto=format&fit=crop&w=600&q=80"
+             alt="Controle via smartphone">
         <h3>Toys 100 % Conectados</h3>
         <p>Vibre no ritmo de músicas, jogos ou toques do parceiro, mesmo a quilômetros de distância.</p>
       </div>
+
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1521033719794-41049d18ab53?auto=format&fit=crop&w=600&q=80" alt="Streaming hot">
+        <img src="https://images.unsplash.com/photo-1521033719794-41049d18ab53?auto=format&fit=crop&w=600&q=80"
+             alt="Streaming hot">
         <h3>Streaming Hot Lives</h3>
         <p>Assista e interaja com modelos reais — cada tip envia estímulos automáticos ao toy delas!</p>
       </div>
+
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1604076913837-2151fad2d8ee?auto=format&fit=crop&w=600&q=80" alt="Segurança">
-        <h3>Compra Discreta & Segura</h3>
+        <img src="https://images.unsplash.com/photo-1604076913837-2151fad2d8ee?auto=format&fit=crop&w=600&q=80"
+             alt="Segurança">
+        <h3>Compra Discreta &amp; Segura</h3>
         <p>Pagamentos anônimos, embalagem neutra e suporte ágil para garantir sua privacidade.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TOYS -->
+<!-- Brinquedos -->
 <section id="toys" class="section alt">
   <div class="container">
     <h2>Brinquedos Controlados por App</h2>
     <div class="cards">
 
-      <!-- Produto 1 -->
       <div class="card">
-        <img src="https://m.media-amazon.com/images/I/51qAZp6fd-L.__AC_SX300_SY300_QL70_ML2_.jpg" alt="G-S Frequency Potter">
+        <!-- imagem agora “contain” dentro do espaço -->
+        <img src="https://m.media-amazon.com/images/I/51qAZp6fd-L.__AC_SX300_SY300_QL70_ML2_.jpg"
+             alt="G-S Frequency Potter">
         <h3>G-S Frequency Potter</h3>
         <p class="price">R$ 57,00</p>
-        <a href="https://amzn.to/3setnft-20" target="_blank" rel="nofollow sponsored" class="btn">Comprar na Amazon</a>
+        <a href="https://amzn.to/3setnft-20" target="_blank" rel="nofollow sponsored" class="btn">
+          Comprar na Amazon
+        </a>
       </div>
 
-      <!-- Placeholder para novos produtos -->
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1525097487452-6278ff080c31?auto=format&fit=crop&w=600&q=80" alt="Em breve">
+        <img src="https://images.unsplash.com/photo-1525097487452-6278ff080c31?auto=format&fit=crop&w=600&q=80"
+             alt="Em breve">
         <h3>Próximo Lançamento</h3>
         <p class="price">Em breve</p>
         <a href="#" class="btn" style="opacity:.5;pointer-events:none">Aguarde</a>
@@ -166,51 +165,64 @@ document.addEventListener('DOMContentLoaded',()=>{
   </div>
 </section>
 
-<!-- STREAMING -->
+<!-- Streaming -->
 <section id="streams" class="section">
   <div class="container">
     <h2>Streaming Sensual ao Vivo</h2>
     <p style="text-align:center;max-width:720px;margin:0 auto 2.5rem">
-      Clique em uma plataforma, cadastre-se com nosso link exclusivo e receba <strong>bônus de boas-vindas</strong>. Cada nova conta gerada ajuda o PrazerApp a continuar trazendo conteúdo incrível. 😉
+      Clique em uma plataforma, cadastre-se com nosso link exclusivo e receba <strong>bônus de boas-vindas</strong>.
+      Cada nova conta gerada ajuda o PrazerApp a continuar trazendo conteúdo incrível. 😉
     </p>
 
     <div class="cards">
 
-      <!-- Stream 1 -->
+      <!-- você substituirá os href pelos seus links pessoais -->
       <div class="card">
         <img src="https://images.unsplash.com/photo-1589382129443-41af66dd4ea1?auto=format&fit=crop&w=600&q=80" alt="Stripchat">
         <h3>Stripchat</h3>
         <p>Shows interativos com vibração sincronizada. +200 mil modelos online 24/7.</p>
-        <a href="https://example.com/stripchat-aff" target="_blank" rel="nofollow sponsored" class="btn">Entrar com Bônus</a>
+        <a href="#" target="_blank" rel="nofollow sponsored" class="btn">Entrar com Bônus</a>
       </div>
 
-      <!-- Stream 2 -->
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1539749351986-f99bb7f7405e?auto=format&fit=crop&w=600&q=80" alt="XLoveCam">
-        <h3>XLoveCam</h3>
-        <p>Privês HD, vibrações por tip e tokens de presente para modelos favoritas.</p>
-        <a href="https://example.com/xlovecam-aff" target="_blank" rel="nofollow sponsored" class="btn">Ganhar Tokens Grátis</a>
+        <img src="https://images.unsplash.com/photo-1539749351986-f99bb7f7405e?auto=format&fit=crop&w=600&q=80" alt="Chaturbate">
+        <h3>Chaturbate</h3>
+        <p>Gigante global de cams; bônus para novos usuários e enorme diversidade de salas.</p>
+        <a href="#" target="_blank" rel="nofollow sponsored" class="btn">Ganhar Tokens Grátis</a>
       </div>
 
-      <!-- Stream 3 -->
       <div class="card">
         <img src="https://images.unsplash.com/photo-1569180885108-26eb5e625251?auto=format&fit=crop&w=600&q=80" alt="BongaCams">
         <h3>BongaCams</h3>
         <p>Salas públicas e privadas com suporte a Lovense, OhMiBod e muito mais.</p>
-        <a href="https://example.com/bongacams-aff" target="_blank" rel="nofollow sponsored" class="btn">Assistir Agora</a>
+        <a href="#" target="_blank" rel="nofollow sponsored" class="btn">Assistir Agora</a>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1526403228-3ddb4000452d?auto=format&fit=crop&w=600&q=80" alt="LiveJasmin">
+        <h3>LiveJasmin</h3>
+        <p>Câmeras em 4K, categoria premium, créditos iniciais para novos membros.</p>
+        <a href="#" target="_blank" rel="nofollow sponsored" class="btn">Desbloquear Créditos</a>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=600&q=80" alt="CamSoda">
+        <h3>CamSoda</h3>
+        <p>Interface moderna, shows VR e promoções “freemium” para novos cadastros.</p>
+        <a href="#" target="_blank" rel="nofollow sponsored" class="btn">Explorar Shows</a>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- PROMO -->
+<!-- Promo -->
 <section id="promo" class="section alt">
   <div class="container">
-    <h2>Cupons & Combos Exclusivos</h2>
+    <h2>Cupons &amp; Combos Exclusivos</h2>
     <p style="text-align:center;max-width:700px;margin:0 auto">
       Inscreva-se para receber cupons de desconto nos melhores toys conectados e
-      bônus de fichas nas plataformas de streaming parceiros.
+      bônus de fichas nas plataformas de streaming parceiras.
     </p>
     <form class="newsletter" action="#" method="post">
       <input type="email" placeholder="Seu e-mail" required>
@@ -219,7 +231,6 @@ document.addEventListener('DOMContentLoaded',()=>{
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer id="contato">
   <p>&copy; 2025 PrazerApp • Proibido para menores de 18 anos.</p>
   <p>Compras 100 % discretas • Dúvidas? contato@prazerapp.com</p>
