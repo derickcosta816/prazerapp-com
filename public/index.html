@@ -2,12 +2,25 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PrazerApp | Brinquedos Conectados & Streaming</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
         content="Descubra sex toys controlados por app e streaming sensual. Compre e assine via nossos links de afiliado."/>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ---------- Extra breakpoints ---------- */
+    @media (min-width:1600px){      /* TVs 4K e monitores grandes */
+      h1{font-size:3.5rem}
+      .text-lg{font-size:1.25rem}
+      .container{max-width:1600px}
+    }
+    /* ---------- Mobile nav ---------- */
+    #hamburger{display:none;font-size:1.5rem;cursor:pointer}
+    @media(max-width:768px){
+      #nav-menu{display:none;flex-direction:column;gap:1rem;padding-top:1rem}
+      #hamburger{display:block}
+    }
+  </style>
 </head>
 
 <body class="bg-dark text-light">
@@ -15,6 +28,11 @@
   <header class="navbar">
     <div class="container flex items-center justify-between py-3">
       <a href="#top" class="text-xl font-bold">PrazerApp</a>
+
+      <!-- Botão hambúrguer -->
+      <span id="hamburger">☰</span>
+
+      <!-- Menu -->
       <nav id="nav-menu" class="nav-menu flex gap-6 text-sm">
         <a href="#produtos" class="hover:text-pink">Brinquedos</a>
         <a href="#streaming" class="hover:text-pink">Streaming</a>
@@ -23,10 +41,10 @@
     </div>
   </header>
 
-  <!-- ========== HERO ========== -->
+  <!-- ========== HERO ========= -->
   <section id="hero" class="py-12 text-center px-4">
     <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
-      Brinquedos Conectados &amp; Streaming Sensual
+      Brinquedos Conectados & Streaming Sensual
     </h1>
     <p class="max-w-2xl mx-auto text-lg opacity-70">
       Combine tecnologia e prazer: explore sex toys controlados por aplicativo
@@ -34,7 +52,7 @@
     </p>
   </section>
 
-  <!-- ========== PRODUTOS ========== -->
+  <!-- ========== PRODUTOS ========= -->
   <main id="produtos" class="container mx-auto px-4 py-12">
     <h2 class="text-2xl font-bold mb-8 text-center">
       Brinquedos Conectados em Destaque
@@ -50,19 +68,16 @@
         />
         <h3 class="text-xl font-bold mt-4">G-S Frequency Potter</h3>
         <p class="text-pink font-semibold mb-4">R$ 57,00</p>
-        <a
-          href="gs-frequency-potter.html"
-          class="btn btn-primary w-full"
-        >
+        <a href="gs-frequency-potter.html" class="btn btn-primary w-full">
           Comprar na Amazon
         </a>
       </article>
 
-      <!-- (adicione novos cards duplicando o bloco acima) -->
+      <!-- Duplicar este bloco para mais produtos -->
     </div>
   </main>
 
-  <!-- ========== STREAMING CTA ========== -->
+  <!-- ========== STREAMING CTA ========= -->
   <section id="streaming" class="bg-darker py-12 px-4">
     <h2 class="text-2xl font-bold mb-10 text-center">
       Experimente Streaming ao Vivo com Modelos Sensuais
@@ -79,17 +94,14 @@
         <div class="flex-1 flex-col flex">
           <h3 class="text-xl font-semibold mb-2">Chaturbate</h3>
           <p class="mb-4 flex-1">
-            Shows adultos 24&nbsp;/&nbsp;7 em alta definição com milhares de
-            performers. Crie sua conta gratuita e desbloqueie recursos premium
-            para experiências ainda mais quentes.
+            Shows adultos 24&nbsp;/&nbsp;7 em alta definição. Crie sua conta
+            gratuita e desbloqueie recursos premium.
           </p>
           <a
             href="https://chaturbate.com/affiliados?track=prazerapp"
             target="_blank" rel="nofollow sponsored"
             class="btn btn-secondary w-full md:w-auto"
-          >
-            Assinar Chaturbate
-          </a>
+          >Assinar Chaturbate</a>
         </div>
       </article>
 
@@ -103,22 +115,20 @@
         <div class="flex-1 flex-col flex">
           <h3 class="text-xl font-semibold mb-2">CamSoda</h3>
           <p class="mb-4 flex-1">
-            Plataforma interativa com brinquedos sincronizados, vídeos em 360°
-            e realidade virtual. Cadastre-se grátis e ganhe bônus de boas-vindas.
+            Plataforma interativa com brinquedos sincronizados e realidade
+            virtual. Cadastre-se grátis e ganhe bônus de boas-vindas.
           </p>
           <a
             href="https://camsoda.com/signup?ref=prazerapp"
             target="_blank" rel="nofollow sponsored"
             class="btn btn-secondary w-full md:w-auto"
-          >
-            Assinar CamSoda
-          </a>
+          >Assinar CamSoda</a>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- ========== SOBRE ========== -->
+  <!-- ========== SOBRE ========= -->
   <section id="sobre" class="container mx-auto px-4 py-16 text-center max-w-2xl">
     <h2 class="text-2xl font-bold mb-4">Sobre o PrazerApp</h2>
     <p class="opacity-70">
@@ -129,9 +139,17 @@
     </p>
   </section>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- ========== FOOTER ========= -->
   <footer class="text-center text-xs py-10 opacity-60">
     © 2025 PrazerApp. Todos os direitos reservados.
   </footer>
+
+  <!-- ========== JS: Toggle mobile menu ========= -->
+  <script>
+    document.getElementById('hamburger')
+      .addEventListener('click',()=>document
+        .getElementById('nav-menu')
+        .classList.toggle('hidden'));
+  </script>
 </body>
 </html>
