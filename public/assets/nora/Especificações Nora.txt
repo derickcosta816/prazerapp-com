@@ -1,0 +1,19 @@
+Use remove.bg ou Photos-hop (Select > Subject + Mask) para deixar fundo 100 % transparente.
+
+Padronizar dimensões
+
+Thumbnails: 600 × 600 px (1:1)
+
+Galeria interna: 1200 × 1200 px (retina ready)
+
+Hero/baner: 1920 × 1080 px, fundo degradê #FF2E8D → #B4006C para combinar com a paleta do prazerapp.
+
+Correção de cor & nitidez
+
+Ajuste níveis (Levels / Curves) para realçar o rosa.
+
+Aplique Sharpen 0,3 px / 100 % apenas na borda para maior definição.
+
+Exportação otimizada
+
+Formato WebP qualidade 85 % (reduz ~60 % do peso sem perda visível).

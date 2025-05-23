@@ -4,18 +4,18 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PrazerApp | Brinquedos Conectados & Streaming</title>
-  <!-- CSS global reutilizado em todas as páginas -->
+  <title>PrazerApp | Brinquedos Conectados & Streaming</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Descubra sex toys controlados por app e streaming de modelos sensuais. Compre com segurança através dos nossos links de afiliado." />
+  <meta name="description"
+        content="Descubra sex toys controlados por app e streaming sensual. Compre e assine via nossos links de afiliado."/>
 </head>
 
 <body class="bg-dark text-light">
-  <!-- ========================= NAVBAR ========================= -->
+  <!-- ========== NAVBAR ========== -->
   <header class="navbar">
     <div class="container flex items-center justify-between py-3">
       <a href="#top" class="text-xl font-bold">PrazerApp</a>
-      <nav id="nav-menu" class="nav-menu md:flex gap-6 text-sm">
+      <nav id="nav-menu" class="nav-menu flex gap-6 text-sm">
         <a href="#produtos" class="hover:text-pink">Brinquedos</a>
         <a href="#streaming" class="hover:text-pink">Streaming</a>
         <a href="#sobre" class="hover:text-pink">Sobre</a>
@@ -23,95 +23,93 @@
     </div>
   </header>
 
-  <!-- ========================= HERO ========================= -->
-  <section id="hero" class="py-20 text-center px-4">
+  <!-- ========== HERO ========== -->
+  <section id="hero" class="py-12 text-center px-4">
     <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
       Brinquedos Conectados &amp; Streaming Sensual
     </h1>
-    <p class="max-w-2xl mx-auto text-lg opacity-80">
-      Combine tecnologia e prazer: descubra sex toys controlados por aplicativo
-      e assine serviços de streaming ao vivo que sincronizam vibrações com o show.
+    <p class="max-w-2xl mx-auto text-lg opacity-70">
+      Combine tecnologia e prazer: explore sex toys controlados por aplicativo
+      e assine shows ao vivo que podem se sincronizar com seu brinquedo.
     </p>
   </section>
 
-  <!-- ========================= PRODUTOS ========================= -->
+  <!-- ========== PRODUTOS ========== -->
   <main id="produtos" class="container mx-auto px-4 py-12">
     <h2 class="text-2xl font-bold mb-8 text-center">
       Brinquedos Conectados em Destaque
     </h2>
 
-    <div class="grid md:grid-cols-3 gap-10" id="products-grid">
-      <!-- ========== CARD: G‑S Frequency Potter ========== -->
-      <article class="bg-darker rounded-xl shadow-lg p-6 flex flex-col items-center">
+    <div class="grid" id="products-grid">
+      <!-- CARD 1 -->
+      <article class="col-1-3 card flex flex-col items-center">
         <img
           src="assets/gs-frequency-potter.webp"
           alt="G-S Frequency Potter vibrador vestível controlado por app"
           class="rounded-lg w-full"
         />
-        <h3 class="text-xl font-bold mt-4">G‑S Frequency Potter</h3>
-        <p class="text-pink font-semibold mb-4">R$ 57,00</p>
+        <h3 class="text-xl font-bold mt-4">G-S Frequency Potter</h3>
+        <p class="text-pink font-semibold mb-4">R$ 57,00</p>
         <a
           href="gs-frequency-potter.html"
-          class="btn btn-primary w-full text-center"
+          class="btn btn-primary w-full"
         >
           Comprar na Amazon
         </a>
       </article>
-      <!-- Você pode duplicar o bloco acima para adicionar mais produtos -->
+
+      <!-- (adicione novos cards duplicando o bloco acima) -->
     </div>
   </main>
 
-  <!-- ========================= STREAMING CTA ========================= -->
-  <section id="streaming" class="bg-darker py-16 px-4">
+  <!-- ========== STREAMING CTA ========== -->
+  <section id="streaming" class="bg-darker py-12 px-4">
     <h2 class="text-2xl font-bold mb-10 text-center">
       Experimente Streaming ao Vivo com Modelos Sensuais
     </h2>
 
-    <div class="container mx-auto grid md:grid-cols-2 gap-8">
-      <!-- ======= CHATEURBATE ======= -->
-      <article class="rounded-xl overflow-hidden shadow-lg flex flex-col bg-dark">
+    <div class="container mx-auto grid gap-10">
+      <!-- CHATEURBATE -->
+      <article class="card flex flex-col md:flex-row gap-6">
         <img
           src="assets/chaturbate-banner.webp"
           alt="Modelos sensuais ao vivo na Chaturbate"
-          class="w-full object-cover h-48"
+          class="rounded-lg w-full max-w-sm"
         />
-        <div class="p-6 flex flex-col flex-1">
+        <div class="flex-1 flex-col flex">
           <h3 class="text-xl font-semibold mb-2">Chaturbate</h3>
           <p class="mb-4 flex-1">
             Shows adultos 24&nbsp;/&nbsp;7 em alta definição com milhares de
-            performers. Crie uma conta gratuita e libere recursos premium para
-            experiências ainda mais quentes.
+            performers. Crie sua conta gratuita e desbloqueie recursos premium
+            para experiências ainda mais quentes.
           </p>
           <a
             href="https://chaturbate.com/affiliados?track=prazerapp"
-            target="_blank"
-            rel="nofollow sponsored"
-            class="btn btn-secondary text-center w-full"
+            target="_blank" rel="nofollow sponsored"
+            class="btn btn-secondary w-full md:w-auto"
           >
             Assinar Chaturbate
           </a>
         </div>
       </article>
 
-      <!-- ======= CAMSODA ======= -->
-      <article class="rounded-xl overflow-hidden shadow-lg flex flex-col bg-dark">
+      <!-- CAMSODA -->
+      <article class="card flex flex-col md:flex-row gap-6">
         <img
           src="assets/camsoda-banner.webp"
           alt="Experiência imersiva em 3D e VR na CamSoda"
-          class="w-full object-cover h-48"
+          class="rounded-lg w-full max-w-sm"
         />
-        <div class="p-6 flex flex-col flex-1">
+        <div class="flex-1 flex-col flex">
           <h3 class="text-xl font-semibold mb-2">CamSoda</h3>
           <p class="mb-4 flex-1">
-            Plataforma interativa com brinquedos sincronizados, vídeos em 360° e
-            realidade virtual. Cadastre‑se grátis e ganhe bônus de
-            boas‑vindas.
+            Plataforma interativa com brinquedos sincronizados, vídeos em 360°
+            e realidade virtual. Cadastre-se grátis e ganhe bônus de boas-vindas.
           </p>
           <a
             href="https://camsoda.com/signup?ref=prazerapp"
-            target="_blank"
-            rel="nofollow sponsored"
-            class="btn btn-secondary text-center w-full"
+            target="_blank" rel="nofollow sponsored"
+            class="btn btn-secondary w-full md:w-auto"
           >
             Assinar CamSoda
           </a>
@@ -120,21 +118,20 @@
     </div>
   </section>
 
-  <!-- ========================= SOBRE ========================= -->
-  <section id="sobre" class="container mx-auto px-4 py-20 text-center max-w-3xl">
+  <!-- ========== SOBRE ========== -->
+  <section id="sobre" class="container mx-auto px-4 py-16 text-center max-w-2xl">
     <h2 class="text-2xl font-bold mb-4">Sobre o PrazerApp</h2>
-    <p class="opacity-80">
+    <p class="opacity-70">
       Nossa missão é reunir em um único lugar tecnologias que potencializam a
       vida íntima — de sextoys inteligentes a plataformas de streaming capazes
-      de sincronizar vibrações em tempo real. Todos os links aqui divulgados são
-      afiliados: ao comprar ou assinar pelos nossos botões você apoia o
-      crescimento do projeto sem pagar nada a mais.
+      de sincronizar vibrações em tempo real. Comprando ou assinando pelos
+      nossos links, você apoia o projeto sem pagar nada a mais.
     </p>
   </section>
 
-  <!-- ========================= FOOTER ========================= -->
+  <!-- ========== FOOTER ========== -->
   <footer class="text-center text-xs py-10 opacity-60">
-    © 2025 PrazerApp. Todos os direitos reservados.
+    © 2025 PrazerApp. Todos os direitos reservados.
   </footer>
 </body>
 </html>
