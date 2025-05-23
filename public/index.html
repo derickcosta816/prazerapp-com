@@ -3,63 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PrazerApp – Toys controlados por aplicativo</title>
+<title>PrazerApp • Vibrações & Streams Interativos</title>
+
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- ESTILO INLINE -->
 <style>
 :root{
-  --rose:#ff3cac;
-  --violet:#784ba0;
-  --dark:#111015;
+  --pink:#ff3cac;
+  --purple:#784ba0;
+  --dark:#0f0e12;
   --light:#faf7fc;
+  --card-bg:#1b1a22;
 }
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{color:var(--light);background:linear-gradient(135deg,var(--violet),var(--rose));min-height:100vh;}
-a{color:var(--light);text-decoration:none;transition:opacity .2s}
+body{background:linear-gradient(135deg,var(--purple),var(--pink));color:var(--light);min-height:100vh}
+
+/* Links & botões */
+a{color:inherit;text-decoration:none;transition:opacity .25s}
 a:hover{opacity:.8}
-header{background:rgba(17,16,21,.6);backdrop-filter:blur(6px);position:sticky;top:0;z-index:1000;}
-.container{max-width:1200px;margin:auto;padding:0 1rem;}
-.navbar{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;}
-.navbar nav{display:flex;gap:1.5rem;font-size:.95rem;font-weight:500;text-transform:uppercase;}
-.btn{display:inline-block;background:var(--rose);padding:.8rem 2rem;border-radius:25px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.25);}
-.btn:hover{transform:translateY(-2px);}
-.hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:5rem 1rem 4rem;}
-.hero h1{font-size:clamp(2.2rem,5vw,3.5rem);line-height:1.15;margin-bottom:1rem;font-weight:700;}
-.hero p{font-size:1.1rem;max-width:600px;margin-bottom:2rem;}
-.section{padding:4rem 1rem;background:var(--light);color:var(--dark);}
-.section.dark{background:var(--dark);color:var(--light);}
-.section h2{font-size:2rem;text-align:center;margin-bottom:3rem;}
-.cards{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
-.card{background:var(--dark);border-radius:16px;padding:1.5rem;text-align:center;transition:transform .25s,box-shadow .25s;}
-.card img{width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:1rem;}
-.card h3{font-size:1.1rem;margin-bottom:.5rem;}
-.card .price{font-size:1rem;font-weight:600;margin-bottom:1rem;color:var(--rose);}
-.card:hover{transform:translateY(-6px);box-shadow:0 10px 25px rgba(0,0,0,.3);}
-.carousel{position:relative;overflow:hidden;height:250px;border-radius:18px;background:var(--dark);}
-.carousel-track{display:flex;animation:scroll 20s linear infinite;}
-.carousel-track img{width:100%;object-fit:cover;flex:0 0 100%;}
-@keyframes scroll{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(-100%)}
-}
-.footer{font-size:.85rem;padding:2rem;text-align:center;background:#0d0c10;color:#888;}
+.btn{display:inline-block;background:var(--pink);padding:.9rem 2.2rem;border-radius:30px;font-weight:600;box-shadow:0 4px 14px rgba(0,0,0,.25);transition:transform .25s}
+.btn:hover{transform:translateY(-3px)}
+
+/* Cabeçalho */
+header{position:sticky;top:0;z-index:1000;background:rgba(15,14,18,.65);backdrop-filter:blur(7px)}
+.container{max-width:1200px;margin:auto;padding:0 1rem}
+.navbar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.navbar nav{display:flex;gap:1.5rem;font-size:.93rem;font-weight:500;text-transform:uppercase}
+.logo{font-size:1.35rem;font-weight:700;letter-spacing:.5px}
+
+/* Botão hamburguer */
+.menu-toggle{display:none;width:30px;height:22px;position:relative;cursor:pointer}
+.menu-toggle span{position:absolute;left:0;width:100%;height:3px;background:var(--light);border-radius:2px;transition:.3s}
+.menu-toggle span:nth-child(1){top:0}
+.menu-toggle span:nth-child(2){top:9px}
+.menu-toggle span:nth-child(3){bottom:0}
+
+/* Hero */
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:6rem 1rem 4rem}
+.hero h1{font-size:clamp(2.4rem,6vw,3.8rem);line-height:1.1;margin-bottom:1rem;font-weight:700}
+.hero p{font-size:1.15rem;max-width:680px;margin-bottom:2.2rem}
+
+/* Seções genéricas */
+.section{padding:4.5rem 1rem;background:var(--light);color:var(--dark)}
+.section.alt{background:var(--dark);color:var(--light)}
+.section h2{font-size:2rem;text-align:center;margin-bottom:3rem}
+
+/* Grades de cartões */
+.cards{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card-bg);border-radius:18px;padding:1.6rem;text-align:center;transition:transform .25s,box-shadow .25s}
+.card img{width:100%;height:220px;object-fit:cover;border-radius:14px;margin-bottom:1rem}
+.card h3{font-size:1.1rem;margin-bottom:.4rem}
+.card .price{font-size:1rem;font-weight:600;color:var(--pink);margin-bottom:.9rem}
+.card:hover{transform:translateY(-6px);box-shadow:0 10px 28px rgba(0,0,0,.35)}
+
+/* Newsletter */
+.newsletter{max-width:420px;margin:2.5rem auto 0;display:flex;gap:.6rem}
+.newsletter input{flex:1;padding:1rem;border-radius:25px;border:none}
+
+/* Footer */
+footer{padding:2.5rem 1rem;background:#0a090d;color:#8b8b8b;font-size:.85rem;text-align:center}
+
+/* Mobile nav */
 @media(max-width:768px){
-  .navbar nav{position:absolute;top:100%;left:0;right:0;background:rgba(17,16,21,.95);flex-direction:column;gap:1rem;padding:1rem;display:none;}
-  .navbar nav.show{display:flex;}
-  .menu-toggle{cursor:pointer;display:block;width:30px;height:22px;position:relative;}
-  .menu-toggle span{background:var(--light);height:3px;width:100%;border-radius:2px;position:absolute;left:0;transition:.3s;}
-  .menu-toggle span:nth-child(1){top:0;}
-  .menu-toggle span:nth-child(2){top:9px;}
-  .menu-toggle span:nth-child(3){bottom:0;}
-  .menu-toggle.active span:nth-child(1){transform:rotate(45deg);top:9px;}
-  .menu-toggle.active span:nth-child(2){opacity:0;}
-  .menu-toggle.active span:nth-child(3){transform:rotate(-45deg);bottom:9px;}
+  .menu-toggle{display:block}
+  .navbar nav{position:absolute;top:64px;left:0;right:0;background:var(--dark);flex-direction:column;gap:1.2rem;padding:1.2rem;display:none}
+  .navbar nav.show{display:flex}
+  /* animação X */
+  .menu-toggle.active span:nth-child(1){transform:rotate(45deg);top:9px}
+  .menu-toggle.active span:nth-child(2){opacity:0}
+  .menu-toggle.active span:nth-child(3){transform:rotate(-45deg);bottom:9px}
 }
 </style>
+
+<!-- JS nav toggle -->
 <script>
-window.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded',()=>{
   const toggle=document.querySelector('.menu-toggle');
-  const nav=document.getElementById('nav-links');
+  const nav=document.getElementById('nav');
   toggle.addEventListener('click',()=>{
     toggle.classList.toggle('active');
     nav.classList.toggle('show');
@@ -67,108 +90,139 @@ window.addEventListener('DOMContentLoaded',()=>{
 });
 </script>
 </head>
+
 <body>
-<header class="navbar">
-  <div class="container">
-    <a href="#" class="text-xl font-bold">PrazerApp</a>
-    <div class="menu-toggle md:hidden">
-      <span></span><span></span><span></span>
-    </div>
-    <nav id="nav-links" class="md:flex">
-      <a href="#app-lovers">App Lovers</a>
-      <a href="#camplay">Para Cam Models</a>
-      <a href="#produtos">Produtos</a>
-      <a href="#ofertas">Ofertas</a>
+
+<!-- NAVBAR -->
+<header>
+  <div class="container navbar">
+    <a class="logo" href="#">PrazerApp</a>
+    <div class="menu-toggle"><span></span><span></span><span></span></div>
+    <nav id="nav">
+      <a href="#toys">Brinquedos App</a>
+      <a href="#streams">Streaming ao Vivo</a>
+      <a href="#promo">Promoções</a>
       <a href="#contato">Contato</a>
     </nav>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Conecte‑se ao prazer sem limites</h1>
-  <p>Descubra os melhores brinquedos controlados por aplicativo e experiências interativas para camgirls, camboys e casais modernos.</p>
-  <a href="#produtos" class="btn">Explorar agora</a>
+  <h1>Sinta, Controle & Transmita Prazer</h1>
+  <p>Os melhores <strong>vibradores controlados por aplicativo</strong> e as mais quentes
+     <strong>lives sensuais</strong> reunidos em um só lugar para elevar suas experiências —
+     sozinho(a) ou acompanhado(a).</p>
+  <a href="#toys" class="btn">Explorar Agora</a>
 </section>
 
-<section id="app-lovers" class="section dark">
+<!-- FEATURES -->
+<section class="section">
   <div class="container">
-    <h2>App Lovers – Como funciona?</h2>
+    <h2>Por que o PrazerApp?</h2>
     <div class="cards">
       <div class="card">
-        <img src="assets/app-step1.jpg" alt="Baixe o app">
-        <h3>Baixe o App</h3>
-        <p>Compatível com iOS, Android, Windows e Mac. Controle total na palma da mão.</p>
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Controle total">
+        <h3>Toys 100 % Conectados</h3>
+        <p>Vibre no ritmo de músicas, jogos ou toques do parceiro, mesmo a quilômetros de distância.</p>
       </div>
       <div class="card">
-        <img src="assets/app-step2.jpg" alt="Conecte o toy">
-        <h3>Conecte o Toy</h3>
-        <p>Bluetooth & Wi-Fi para até 10 m ou controle global via internet.</p>
+        <img src="https://images.unsplash.com/photo-1521033719794-41049d18ab53?auto=format&fit=crop&w=600&q=80" alt="Streaming hot">
+        <h3>Streaming Hot Lives</h3>
+        <p>Assista e interaja com modelos reais — cada tip envia estímulos automáticos ao toy delas!</p>
       </div>
       <div class="card">
-        <img src="assets/app-step3.jpg" alt="Explore modos">
-        <h3>Explore Modos</h3>
-        <p>Crie padrões, sincronize com músicas ou deixe seu parceiro(a) comandar à distância.</p>
+        <img src="https://images.unsplash.com/photo-1604076913837-2151fad2d8ee?auto=format&fit=crop&w=600&q=80" alt="Segurança">
+        <h3>Compra Discreta & Segura</h3>
+        <p>Pagamentos anônimos, embalagem neutra e suporte ágil para garantir sua privacidade.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="camplay" class="section">
+<!-- TOYS -->
+<section id="toys" class="section alt">
   <div class="container">
-    <h2>Interatividade para Camgirls & Camboys</h2>
-    <div class="carousel">
-      <div class="carousel-track">
-        <img src="assets/cam1.jpg" alt="Toy interativo 1">
-        <img src="assets/cam2.jpg" alt="Toy interativo 2">
-        <img src="assets/cam3.jpg" alt="Toy interativo 3">
-      </div>
-    </div>
-    <p style="text-align:center;margin-top:1.5rem;">Receba vibrações automáticas por tips, incremente seu chat e aumente seus ganhos.</p>
-  </div>
-</section>
-
-<section id="produtos" class="section dark">
-  <div class="container">
-    <h2>Destaques Conectados</h2>
+    <h2>Brinquedos Controlados por App</h2>
     <div class="cards">
+
+      <!-- Produto 1 -->
       <div class="card">
-        <img src="assets/lush3.jpg" alt="Lovense Lush 3">
-        <h3>Lovense Lush 3</h3>
-        <p class="price">R$ 799,00</p>
-        <a class="btn" href="#contato">Comprar</a>
+        <img src="https://m.media-amazon.com/images/I/51qAZp6fd-L.__AC_SX300_SY300_QL70_ML2_.jpg" alt="G-S Frequency Potter">
+        <h3>G-S Frequency Potter</h3>
+        <p class="price">R$ 57,00</p>
+        <a href="https://amzn.to/3setnft-20" target="_blank" rel="nofollow sponsored" class="btn">Comprar na Amazon</a>
       </div>
+
+      <!-- Placeholder para novos produtos -->
       <div class="card">
-        <img src="assets/wevibe-chorus.jpg" alt="We‑Vibe Chorus">
-        <h3>We‑Vibe Chorus</h3>
-        <p class="price">R$ 1.199,00</p>
-        <a class="btn" href="#contato">Comprar</a>
+        <img src="https://images.unsplash.com/photo-1525097487452-6278ff080c31?auto=format&fit=crop&w=600&q=80" alt="Em breve">
+        <h3>Próximo Lançamento</h3>
+        <p class="price">Em breve</p>
+        <a href="#" class="btn" style="opacity:.5;pointer-events:none">Aguarde</a>
       </div>
-      <div class="card">
-        <img src="assets/satisfyercurvy.jpg" alt="Satisfyer Curvy 3+">
-        <h3>Satisfyer Curvy 3+</h3>
-        <p class="price">R$ 499,00</p>
-        <a class="btn" href="#contato">Comprar</a>
-      </div>
+
     </div>
   </div>
 </section>
 
-<section id="ofertas" class="section">
+<!-- STREAMING -->
+<section id="streams" class="section">
   <div class="container">
-    <h2>Ofertas e Combos</h2>
-    <p style="text-align:center;max-width:700px;margin:auto;">Cadastre‑se para receber cupons de lançamento e combos exclusivos de brinquedos conectados.</p>
-    <div style="text-align:center;margin-top:2rem;">
-      <form action="#" method="post" style="max-width:420px;margin:auto;display:flex;gap:.5rem;">
-        <input type="email" name="email" placeholder="Seu e‑mail" required style="flex:1;padding:1rem;border-radius:25px;border:none;">
-        <button type="submit" class="btn">Quero desconto!</button>
-      </form>
+    <h2>Streaming Sensual ao Vivo</h2>
+    <p style="text-align:center;max-width:720px;margin:0 auto 2.5rem">
+      Clique em uma plataforma, cadastre-se com nosso link exclusivo e receba <strong>bônus de boas-vindas</strong>. Cada nova conta gerada ajuda o PrazerApp a continuar trazendo conteúdo incrível. 😉
+    </p>
+
+    <div class="cards">
+
+      <!-- Stream 1 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1589382129443-41af66dd4ea1?auto=format&fit=crop&w=600&q=80" alt="Stripchat">
+        <h3>Stripchat</h3>
+        <p>Shows interativos com vibração sincronizada. +200 mil modelos online 24/7.</p>
+        <a href="https://example.com/stripchat-aff" target="_blank" rel="nofollow sponsored" class="btn">Entrar com Bônus</a>
+      </div>
+
+      <!-- Stream 2 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1539749351986-f99bb7f7405e?auto=format&fit=crop&w=600&q=80" alt="XLoveCam">
+        <h3>XLoveCam</h3>
+        <p>Privês HD, vibrações por tip e tokens de presente para modelos favoritas.</p>
+        <a href="https://example.com/xlovecam-aff" target="_blank" rel="nofollow sponsored" class="btn">Ganhar Tokens Grátis</a>
+      </div>
+
+      <!-- Stream 3 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1569180885108-26eb5e625251?auto=format&fit=crop&w=600&q=80" alt="BongaCams">
+        <h3>BongaCams</h3>
+        <p>Salas públicas e privadas com suporte a Lovense, OhMiBod e muito mais.</p>
+        <a href="https://example.com/bongacams-aff" target="_blank" rel="nofollow sponsored" class="btn">Assistir Agora</a>
+      </div>
+
     </div>
   </div>
 </section>
 
-<footer class="footer">
-  <p>&copy; 2025 PrazerApp. Venda proibida para menores de 18 anos.</p>
-  <p>Os produtos comercializados destinam‑se a uso adulto e consensual. </p>
+<!-- PROMO -->
+<section id="promo" class="section alt">
+  <div class="container">
+    <h2>Cupons & Combos Exclusivos</h2>
+    <p style="text-align:center;max-width:700px;margin:0 auto">
+      Inscreva-se para receber cupons de desconto nos melhores toys conectados e
+      bônus de fichas nas plataformas de streaming parceiros.
+    </p>
+    <form class="newsletter" action="#" method="post">
+      <input type="email" placeholder="Seu e-mail" required>
+      <button class="btn" type="submit">Quero Desconto!</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contato">
+  <p>&copy; 2025 PrazerApp • Proibido para menores de 18 anos.</p>
+  <p>Compras 100 % discretas • Dúvidas? contato@prazerapp.com</p>
 </footer>
 
 </body>
